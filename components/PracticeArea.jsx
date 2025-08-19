@@ -8,7 +8,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 const PracticeArea = () => {
 
   const {role} = useContext(Context)
-  
+   
   if(role === 'lawyer') return false
 
   return (

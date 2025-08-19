@@ -5,19 +5,24 @@ import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "@/constextApi/Context";
 import { LuLogOut } from "react-icons/lu";
+import { CiMenuFries } from "react-icons/ci";
+import { RiMenu4Line } from "react-icons/ri";
 
 const Navbar = () => {
   const router = useRouter();
 
   const [activeLink, setActiveLink] = useState("home");
+  const [showMenu, setShowMenu] = useState(false);
   const { role, token } = useContext(Context);
+
+  console.log("menu: ", showMenu);
 
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     toast.success("Log Out Success");
-    window.location.reload();
-    router.replace("/");
+    window.location.reload(); 
+    router.push("/");
   };
   console.log("role: ", role);
 
@@ -28,14 +33,13 @@ const Navbar = () => {
     { name: "Blog", href: "#blog" },
   ];
 
-
-  const filterdLink = navLinks.filter((link) =>{
-    if(role === 'lawyer' && link.name === 'Practice Area')  return false;
-    if(role === 'client' && link.name === 'Blog')  return false;
-    else{
-      return navLinks
+  const filterdLink = navLinks.filter((link) => {
+    if (role === "lawyer" && link.name === "Practice Area") return false;
+    if (role === "client" && link.name === "Blog") return false;
+    else {
+      return navLinks;
     }
-  })
+  });
 
   return (
     <nav className="flex justify-between fixed top-0 z-50 right-0 left-0 items-center bg-black text-white px-20 py-4">
@@ -66,18 +70,59 @@ const Navbar = () => {
       <div>
         <ul className="flex space-x-4 items-center ">
           {token ? (
-            <li>
-              <button onClick={logout}>
-                <Link href="/login">
-                  <LuLogOut className="mt-2 text-2xl transition-transform duration-300 hover:scale-110 hover:translate-x-1" />
-                </Link>
-              </button>
-            </li>
+            role === "lawyer" ? (
+              <>
+                <button
+                  className="text-2xl cursor-pointer"
+                  onClick={() => setShowMenu((prev) => !prev)}
+                >
+                  {showMenu ? <CiMenuFries /> : <RiMenu4Line />}
+                </button>
+
+                {showMenu && (
+                  <div className="absolute top-[72px] right-20 bg-[#0000007c] border border-gray-500  shadow-lg p-3 w-48">
+                    <ul className="flex flex-col space-y-3 text-sm">
+                      <li>
+                        <Link
+                          href="/my-profile"
+                          onClick={() => setShowMenu(false)}
+                          className="block px-3 py-2  hover:bg-white hover:text-black transition-all duration-300"
+                        >
+                          My Profile
+                        </Link>
+                      </li>
+                      <li>
+                        <button
+                          onClick={logout}
+                          className="w-full text-left px-3 py-2 cursor-pointer hover:bg-white hover:text-black transition-all duration-300"
+                        >
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </>
+            ) : (
+              <>
+                <li>
+                  <button onClick={logout}>
+                    <Link href="/login">
+                      <LuLogOut className="mt-2 text-2xl transition-transform duration-300 hover:scale-110 hover:translate-x-1" />
+                    </Link>
+                  </button>
+                </li>
+              </>
+            )
           ) : (
             <>
               <div className="flex items-center space-x-5">
                 <li>
-                  <Link href="/lawyer-registration" target="_blank" className="hover:underline">
+                  <Link
+                    href="/lawyer-registration"
+                    target="_blank"
+                    className="hover:underline"
+                  >
                     Become a Lawyer
                   </Link>
                 </li>
@@ -89,33 +134,6 @@ const Navbar = () => {
           )}
         </ul>
       </div>
-
-      {/* <div>
-        <ul className="flex space-x-4 items-center ">
-          {
-            role === "client" ? (
-              <>
-                <li>
-                  <Link href="/login">
-                    Become a Lawyer
-                  </Link>
-                </li>
-              </>
-            ): (
-              ""
-            )
-          }
-            <li>
-              <button onClick={logout}>
-                <Link
-                  href="/login"
-                >
-                 <LuLogOut className="mt-2 text-2xl transition-transform duration-300 hover:scale-110 hover:translate-x-1" />
-                </Link>
-              </button>
-            </li>
-        </ul>
-      </div> */}
     </nav>
   );
 };
