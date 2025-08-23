@@ -15,14 +15,12 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { role, token } = useContext(Context);
 
-  console.log("menu: ", showMenu);
-
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     toast.success("Log Out Success");
-    window.location.reload(); 
     router.push("/");
+    window.location.reload(); 
   };
   console.log("role: ", role);
 

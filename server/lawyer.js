@@ -10,6 +10,15 @@ export const getSingleLawyer = async (id) =>{
     }
 }
 
+export const getlawyerProfile =async () =>{
+  try {
+    const {data} = await api.get('/profile');
+    return data.data;
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export const uploadLawyerImage = async (formData, token) => {
   try {
     const { data } = await api.post("/lawyers/upload-image", formData, {
