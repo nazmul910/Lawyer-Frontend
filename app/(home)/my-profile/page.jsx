@@ -8,19 +8,22 @@ import Link from "next/link";
 import { GoUnverified } from "react-icons/go";
 import { Edit } from "lucide-react";
 import LawyerEducation from "@/components/lawyerInfo/lawyerEducation";
+import LawyerBasicInfo from "@/components/lawyerInfo/lawyerBasicInfo";
+import LawyerLicenseInfo from "@/components/lawyerInfo/lawyerLicence";
 
 const MyProfile = () => {
-  const { singleLawyerData, setSingleLawyerData, role,refreshProfile } = useContext(Context);
+  const { singleLawyerData, setSingleLawyerData, role, refreshProfile } =
+    useContext(Context);
   const [selectedFile, setSelectedFile] = useState(null);
   const [isEditImage, setIsEditImage] = useState(false);
   const [uploading, setUploading] = useState(false);
-  console.log("LawyerDetailes: ",singleLawyerData)
+  console.log("LawyerDetailes: ", singleLawyerData);
   const fileInputRef = useRef(null);
 
   const handleFileChange = (e) => {
     if (e.target.files[0]) {
       setSelectedFile(e.target.files[0]);
-      setIsEditImage(true); 
+      setIsEditImage(true);
     }
   };
 
@@ -70,9 +73,11 @@ const MyProfile = () => {
               alt="Profile"
               className="w-28 h-28 rounded-full mx-auto object-cover"
             />
-            {
-              singleLawyerData?.isVerified ? <GoVerified className=" absolute top-2 -right-2 cursor-pointer text-white bg-blue-600 rounded-full hover:text-black" /> : <GoUnverified  className=" absolute bottom-2 right-0 bg-red-600 rounded-full text-white cursor-pointer  hover:text-black" />
-            }
+            {singleLawyerData?.isVerified ? (
+              <GoVerified className=" absolute top-2 -right-2 cursor-pointer text-white bg-blue-600 rounded-full hover:text-black" />
+            ) : (
+              <GoUnverified className=" absolute bottom-2 right-0 bg-red-600 rounded-full text-white cursor-pointer  hover:text-black" />
+            )}
             {!isEditImage && (
               <Edit
                 onClick={() => fileInputRef.current.click()}
@@ -114,8 +119,25 @@ const MyProfile = () => {
           Welcome, {singleLawyerData.name}
         </h1>
         <div>
-          <LawyerEducation education={singleLawyerData?.education} refreshProfile={refreshProfile} />
-          
+          <LawyerBasicInfo
+            basicInfo={singleLawyerData}
+            refreshProfile={refreshProfile}
+          />
+          <LawyerEducation
+            education={singleLawyerData?.education}
+            refreshProfile={refreshProfile}
+          />
+          <LawyerLicenseInfo
+            refreshProfile={refreshProfile}
+            license={singleLawyerData?.license}
+          />
+        </div>
+        <div className="flex justify-end">
+          <Link href="/change-password" target="_blank">
+            <button className="text-blue-500 cursor-pointer underline text-[15px] hover:text-black">
+              Change Password
+            </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -123,4 +145,3 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
-

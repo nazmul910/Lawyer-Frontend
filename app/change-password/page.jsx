@@ -40,7 +40,9 @@ const ChangePassword = () => {
 
       toast.success(res.data.message || "Password changed successfully!");
       reset();
-      router.push("/");
+      localStorage.removeItem('token');
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      router.push("/login");
     } catch (error) {
       console.log(error);
       toast.error(error?.response?.data?.message || "Something went wrong!");
@@ -63,7 +65,7 @@ const ChangePassword = () => {
                 <FaKey className="bg-black text-white text-6xl p-3 rounded-full " />
                 <p className="text-2xl font-bold">Change Password</p>
               </div>
-              {/* Old Password */}
+
               <div>
                 <label className="text-sm">Old Password</label>
                 <div className="relative">
@@ -89,7 +91,6 @@ const ChangePassword = () => {
                 </div>
               </div>
 
-              {/* New Password */}
               <div>
                 <label htmlFor="">New Password</label>
                 <div className="relative">
@@ -119,7 +120,6 @@ const ChangePassword = () => {
                 </div>
               </div>
 
-              {/* Confirm Password */}
               <div>
                 <label htmlFor="">Confirm Password</label>
                 <div className="relative">

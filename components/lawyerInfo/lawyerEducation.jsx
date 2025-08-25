@@ -1,14 +1,18 @@
 "use client";
 import api from "@/server/Api";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { IoAdd } from "react-icons/io5";
 import { IoIosArrowDropup } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
+import { Context } from "@/constextApi/Context";
+import { ClipLoader } from "react-spinners";
 
 const LawyerEducation = ({ education = [], refreshProfile }) => {
   const [show, setShow] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { userId } = useContext(Context);
   const {
     register,
     handleSubmit,
@@ -17,26 +21,30 @@ const LawyerEducation = ({ education = [], refreshProfile }) => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    setIsLoading(true);
     try {
-      const res = await api.post("/lawyers/education", data);
-      toast.success("Education added");
+      setIsLoading(true);
+      const res = await api.post("/lawyers/education",data);
+      toast.success("Education added successfully!");
       reset();
+      setIsLoading(false);
       refreshProfile();
-      setShow(false)
+      setShow(false);
     } catch (err) {
       toast.error("Failed to add education");
+      setIsLoading(false);
     }
   };
 
   const handleDelete = async (edu) => {
-    alert("Are you sure!!")
+    alert("Are you sure!!");
     try {
-      const res = await api.delete("/lawyers/delete-education",{
-        data:{
-          degree:edu.degree,
-          institution:edu.institution
-        }
-      })
+      const res = await api.delete("/lawyers/delete-education", {
+        data: {
+          degree: edu.degree,
+          institution: edu.institution,
+        },
+      });
       toast.success("Education deleted");
       refreshProfile();
     } catch (err) {
@@ -131,9 +139,10 @@ const LawyerEducation = ({ education = [], refreshProfile }) => {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          disabled={isLoading}
+          className="bg-blue-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-700"
         >
-          Save
+          {isLoading ? <ClipLoader color="#fff" size={20} /> : "Save"}
         </button>
       </form>
     </div>

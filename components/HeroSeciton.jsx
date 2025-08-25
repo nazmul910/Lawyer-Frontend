@@ -73,7 +73,7 @@ const HeroSection = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  return (
+  return ( 
     <div
       className="h-screen bg-[url('/image/landing.jpg')] bg-cover bg-center mt-14 mb-28"
       id="home"

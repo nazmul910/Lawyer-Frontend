@@ -8,6 +8,7 @@ export const Context = createContext();
 const RootContextPovider = (props) => {
   const [token, setToken] = useState(null);
   const [role, setRole] = useState(null);
+  const [userId,setUserId] = useState(null)
   const [singleLawyerData, setSingleLawyerData] = useState(null);
 
   const fetchProfile = async () => {
@@ -23,6 +24,7 @@ const RootContextPovider = (props) => {
     const token = localStorage.getItem("token");
     if (token) {
       const decode = jwtDecode(token);
+      setUserId(decode?.userId)
       setRole(decode?.role);
       setToken(token);
 
@@ -34,7 +36,7 @@ const RootContextPovider = (props) => {
 
 
   const value = useMemo(
-    () => ({ role, token, singleLawyerData, setSingleLawyerData, refreshProfile: fetchProfile }),
+    () => ({ role, token, singleLawyerData, setSingleLawyerData,userId ,refreshProfile: fetchProfile }),
     [role, token, singleLawyerData]
   );
 
