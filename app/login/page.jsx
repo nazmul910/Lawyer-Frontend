@@ -9,6 +9,8 @@ import { ClipLoader } from "react-spinners";
 import { jwtDecode } from "jwt-decode";
 import SideImage from "@/components/SideImage";
 
+import {signIn} from "next-auth/react"
+
 const Login = () => {
   const router = useRouter();
 
