@@ -171,7 +171,7 @@ const Login = () => {
 
                   <span >Sign up with Google</span>
                 </button>
-                <button
+                {/* <button
                 onClick={() => signIn("facebook")}
                 className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#1877F2] py-3 font-medium text-white shadow-sm transition-all"
                 >
@@ -182,7 +182,7 @@ const Login = () => {
                  />
                </svg>
                <span>Sign in with Facebook</span>
-              </button>
+              </button> */}
               </div>              
 
           </div>
