@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <Provider>
           <RootContextPovider>
-          <Navbar/>
+          {/* <Navbar/> */}
           <ToastContainer/>
           {children}
           <Footer/>

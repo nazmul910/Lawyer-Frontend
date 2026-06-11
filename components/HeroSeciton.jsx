@@ -63,7 +63,7 @@ const Counter = ({ target, start = 0 }) => {
     <h1 ref={counterRef} className="border-b-[1.5px] px-10 pb-3">
       {count.toLocaleString()}
     </h1>
-  );
+  ); 
 };
 
 const HeroSection = () => {
