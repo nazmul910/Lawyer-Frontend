@@ -96,8 +96,8 @@ const HeroSection = () => {
 
       <div className="flex justify-center gap-10 -mt-12 font-pt_serif font-bold">
         {[
-          { start: 0, value: 36, label: "Dedicated Lawyer" },
-          { start: 800, value: 1526, label: "Successful Cases" },
+          { start: 0, value: 40, label: "Dedicated Lawyer" },
+          { start: 200, value: 576, label: "Successful Cases" },
           { start: 300, value: 725, label: "Satisfied Client" },
         ].map((item, i) => (
           <motion.div
