@@ -20,7 +20,7 @@ const Footer = () => {
           </Link>
           <div>
             <div>
-              <ul className="flex space-x-10">
+              <ul className="flex space-x-3 md:space-x-10">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <a href={link.href}>{link.name}</a>
