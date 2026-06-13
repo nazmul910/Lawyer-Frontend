@@ -36,7 +36,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative overflow-hidden md:overflow-visible h-80 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -75,14 +75,14 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    className="h-[90%] md:h-full w-[90%] md:w-full rounded-3xl object-cover object-center"
                   />
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex flex-col justify-between py-4">
+        <div className="flex flex-col justify-between -mt-20 md:-mt-0 md:py-4">
           <motion.div
             key={active}
             initial={{ y: 20, opacity: 0 }}
@@ -96,7 +96,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.div className="mt-8 text-lg text-gray-500 ">
+            <motion.div className="mt-4 md:mt-8 text-lg text-gray-500 ">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -107,14 +107,14 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     ease: "easeInOut",
                     delay: 0.02 * index,
                   }}
-                  className="inline-block"
+                  className="inline-block text-[14px] md:text-[16px]"
                 >
                   {word}&nbsp;
                 </motion.span>
               ))}
             </motion.div>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-5 sm:pt-12 md:pt-0">
             <button
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
