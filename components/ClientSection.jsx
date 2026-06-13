@@ -4,9 +4,9 @@ import { AnimatedTestimonialsDemo } from "./AnimatedTestomoni";
 const ClientSection = () => {
   return (
     <>
-      <section className="mb-20 " >
-        <div className="text-center space-y-5 mb-10">
-          <h1 className="text-5xl font-pt_serif font-semibold ">
+      <section className="mb-20" >
+        <div className="lg:text-center space-x-2.5 lg:space-y-5 mb-10 px-6 md:px-10 lg:px-20">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-pt_serif font-semibold ">
             Client Says About Us
           </h1>
           <p className="text-secondary">
@@ -18,7 +18,7 @@ const ClientSection = () => {
           <AnimatedTestimonialsDemo />
         </div>
       </section>
-    </>
+    </> 
   );
 };
 export default ClientSection;

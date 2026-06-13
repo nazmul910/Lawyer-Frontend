@@ -15,7 +15,7 @@ const PracticeArea = () => {
     <>
       <section className="mt-10 sm:mt-0 mb-20 px-6 md:px-10 lg:px-20" id="practice">
         <div className="lg:text-center space-y-2.5 lg:space-y-5 mb-10">
-          <h1 className="text-4xl lg:text-5xl font-pt_serif font-semibold ">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-pt_serif font-semibold ">
             Our Practice Area
           </h1>
           <p className="text-secondary">

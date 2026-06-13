@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <PracticeArea />
-      {/* <ClientSection /> */}
+      <ClientSection />
       {/* <LawyerDetails /> */}
       {/* <BlogSection /> */}
     </>
