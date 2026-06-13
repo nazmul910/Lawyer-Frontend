@@ -78,23 +78,23 @@ const HeroSection = () => {
       className="h-screen bg-[url('/image/landing.jpg')] bg-cover bg-center mt-14 mb-28"
       id="home"
     >
-      <div className="flex justify-start items-center h-full p-20">
-        <div className="flex flex-col space-y-4">
-          <h1 className="text-6xl text-primary font-bold">
+      <div className="flex justify-start items-center h-full px-5 md:p-20">
+        <div className="flex flex-col md:space-y-4">
+          <h1 className="text-4xl md:text-6xl text-primary font-bold">
             High Quality <ContainerTextFlipDemo /> <br /> Advice and Support 
           </h1>
-          <p className="text-white text-2xl font-sans">
+          <p className="text-white text-lg md:text-2xl font-sans">
             Leading Polish Lawyer in your city
           </p>
-          <div className="mt-7">
-            <button className="px-10 py-3 font-semibold bg-button-bg hover:text-button-bg hover:bg-button-color transition-all cursor-pointer duration-300 hover:border-0 border">
+          <div className="mt-3 md:mt-7">
+            <button className=" px-5 md:px-10 py-2 md:py-3 font-semibold bg-button-bg hover:text-button-bg hover:bg-button-color transition-all cursor-pointer duration-300 hover:border-0 border">
               Learn More
             </button>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center gap-10 -mt-12 font-pt_serif font-bold">
+      <div className="flex justify-center gap-x-3 lg:gap-10 -mt-12 font-pt_serif font-bold">
         {[
           { start: 0, value: 40, label: "Dedicated Lawyer" },
           { start: 200, value: 576, label: "Successful Cases" },
@@ -102,17 +102,17 @@ const HeroSection = () => {
         ].map((item, i) => (
           <motion.div
             key={i}
-            className="bg-white shadow-2xl space-y-3 py-7 px-12 text-center rounded-2xl text-button-color"
+            className="bg-white shadow-2xl space-y-3 py-4 md:py-7 px-4 md:px-6 lg:px-12 text-center rounded-2xl text-button-color"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.8, delay: i * 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="text-4xl flex justify-center">
+            <div className="text-lg md:text-4xl flex justify-center">
               <Counter start={item.start} target={item.value} />
             </div>
-            <h1 className="text-2xl">{item.label}</h1>
+            <h1 className="text-[12px] md:text-2xl">{item.label}</h1>
           </motion.div>
         ))}
       </div>
