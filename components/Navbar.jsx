@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   const sidebarLinkClass = (href, isOpen) => {
-    const base = "flex items-center gap-4 pl-8 pr-6 py-[15px] text-[10px] tracking-[0.18em] uppercase border-l-2 ml-[2px] transition-all duration-300";
+    const base = "flex items-center gap-4 pl-8 pr-6 py-[15px] text-[16px] tracking-[0.18em] uppercase border-l-2 ml-[2px] transition-all duration-300";
     const anim = isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-3";
     if (activeLink === href) {
       return `${base} ${anim} text-[#F5F4F0] border-l-[#C41E3A]`;
@@ -173,7 +173,7 @@ const Navbar = () => {
 
       {/* ── SIDEBAR ── */}
       <aside
-        className="fixed top-0 left-0 h-screen w-[72%] max-w-[280px] z-[999] bg-[#0a0a0a] flex flex-col lg:hidden border-r border-white/[0.06] transition-transform duration-[420ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+        className="fixed top-0 left-0 h-screen w-[82%] max-w-[380px] z-[999] bg-[#0a0a0a] flex flex-col lg:hidden border-r border-white/[0.06] transition-transform duration-[420ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
         style={{ transform: menuOpen ? "translateX(0)" : "translateX(-100%)" }}
       >
         {/* Crimson signature line */}
@@ -203,9 +203,7 @@ const Navbar = () => {
               className={sidebarLinkClass(link.href, menuOpen)}
               style={{ transitionDelay: menuOpen ? `${80 + i * 50}ms` : "0ms" }}
             >
-              <span className="text-[#C41E3A] font-serif text-[9px] opacity-70 min-w-[14px]">
-                {link.num}
-              </span>
+
               {link.name}
             </a>
           ))}
@@ -221,7 +219,7 @@ const Navbar = () => {
               href="/lawyer-registration"
               target="_blank"
               onClick={close}
-              className="block px-8 py-3 text-[10px] tracking-[0.16em] uppercase text-[#9A7E4F] hover:text-[#F5F4F0] border-b border-white/[0.06] transition-all duration-300"
+              className="block px-8 py-3 text-[16px] tracking-[0.16em] uppercase text-[#9A7E4F] hover:text-[#F5F4F0] border-b border-white/[0.06] transition-all duration-300"
               style={{
                 opacity: menuOpen ? 1 : 0,
                 transform: menuOpen ? "translateX(0)" : "translateX(-12px)",
