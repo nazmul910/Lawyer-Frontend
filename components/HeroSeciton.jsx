@@ -60,7 +60,7 @@ const Counter = ({ target, start = 0 }) => {
   }, [start, target, hasStarted]);
 
   return (
-    <h1 ref={counterRef} className="border-b-[1.5px] px-10 pb-3">
+    <h1 ref={counterRef} className="border-b-[1.5px] px-5 md:px-10 pb-[2px] md:pb-3">
       {count.toLocaleString()}
     </h1>
   ); 
@@ -75,7 +75,7 @@ const HeroSection = () => {
 
   return ( 
     <div
-      className="h-screen bg-[url('/image/landing.jpg')] bg-cover bg-center mt-14 mb-28"
+      className="h-screen bg-[url('/image/landing.jpg')] bg-cover bg-center mt-14 mb-20 md:mb-28"
       id="home"
     >
       <div className="flex justify-start items-center h-full px-5 md:p-20">
@@ -94,7 +94,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-x-3 lg:gap-10 -mt-12 font-pt_serif font-bold">
+      <div className="flex justify-center gap-x-3 lg:gap-10 -mt-8 md:-mt-12 font-pt_serif font-bold">
         {[
           { start: 0, value: 40, label: "Dedicated Lawyer" },
           { start: 200, value: 576, label: "Successful Cases" },
@@ -102,7 +102,7 @@ const HeroSection = () => {
         ].map((item, i) => (
           <motion.div
             key={i}
-            className="bg-white shadow-2xl space-y-3 py-4 md:py-7 px-4 md:px-6 lg:px-12 text-center rounded-2xl text-button-color"
+            className="bg-white shadow-2xl md:space-y-3 py-4 md:py-7 px-3 md:px-6 lg:px-12 text-center rounded-2xl text-button-color"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
