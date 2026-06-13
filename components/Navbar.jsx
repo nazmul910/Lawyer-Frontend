@@ -40,7 +40,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="flex justify-between fixed top-0 z-50 right-0 left-0 items-center bg-black text-white px-20 py-4">
+    <nav className="flex justify-between fixed top-0 z-50 right-0 left-0 items-center bg-black text-white lg:px-20 py-4">
       <Link href="/" className="text-2xl font-mono uppercase font-bold">
         <span className="text-red-700 text-4xl">J</span>ustice
       </Link>
