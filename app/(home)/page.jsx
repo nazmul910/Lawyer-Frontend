@@ -16,7 +16,7 @@ export default function Home() {
       <AboutSection />
       <PracticeArea />
       <ClientSection />
-      {/* <LawyerDetails /> */}
+      <LawyerDetails />
       {/* <BlogSection /> */}
     </>
   );
