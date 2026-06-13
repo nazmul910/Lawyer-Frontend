@@ -13,9 +13,9 @@ const PracticeArea = () => {
 
   return (
     <>
-      <section className="mb-20 px-20" id="practice">
-        <div className="text-center space-y-5 mb-10">
-          <h1 className="text-5xl font-pt_serif font-semibold ">
+      <section className="mt-10 sm:mt-0 mb-20 px-6 md:px-10 lg:px-20" id="practice">
+        <div className="lg:text-center space-y-2.5 lg:space-y-5 mb-10">
+          <h1 className="text-4xl lg:text-5xl font-pt_serif font-semibold ">
             Our Practice Area
           </h1>
           <p className="text-secondary">
@@ -23,7 +23,7 @@ const PracticeArea = () => {
             above saw seasons void <br /> created fruitful third years god.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6 xl:gap-12 ">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-12 ">
           <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
             <div className="relative overflow-hidden">
               <img
@@ -151,7 +151,7 @@ const PracticeArea = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-            <button className="bg-button-bg flex items-center gap-2 justify-center px-10 font-semibold py-4 hover:bg-button-color hover:text-button-bg transition-all duration-500">View All Practices <MdArrowRightAlt className="text-2xl pt-1" /></button>
+            <button className="bg-button-bg flex items-center gap-2 justify-center px-5 lg:px-10 font-semibold py-2.5 lg:py-4 hover:bg-button-color hover:text-button-bg transition-all duration-500">View All Practices <MdArrowRightAlt className="text-2xl" /></button>
         </div>
       </section>
     </>
