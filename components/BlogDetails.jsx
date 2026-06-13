@@ -5,11 +5,11 @@ const BlogDetails = () => {
   return (
     <>
       <section>
-        <div className="grid grid-cols-3 gap-9">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-9">
           <div>
             <img src="/image/blog1.png.webp" alt="" />
-            <div className=" space-y-2 border-b-[1.5px] py-3">
-              <h1 className="text-xl font-bold mt-5">
+            <div className=" space-y-2 border-b-[1.5px] md:py-3">
+              <h1 className="text-xl md:font-bold mt-5">
                 Founder Defends Site After Shoot
               </h1>
               <div
@@ -27,8 +27,8 @@ const BlogDetails = () => {
           </div>
           <div>
             <img src="/image/blog2.png.webp" alt="" />
-            <div className=" space-y-2 border-b-[1.5px] py-3">
-              <h1 className="text-xl font-bold mt-5">
+            <div className=" space-y-2 border-b-[1.5px] md:py-3">
+              <h1 className="text-xl md:font-bold mt-5">
                 Computer models to investors Short
               </h1>
               <div
@@ -46,8 +46,8 @@ const BlogDetails = () => {
           </div>
           <div>
             <img src="/image/blog3.png.webp" alt="" />
-            <div className=" space-y-2 border-b-[1.5px] py-3">
-              <h1 className="text-xl font-bold mt-5">
+            <div className=" space-y-2 border-b-[1.5px] md:py-3">
+              <h1 className="text-xl md:font-bold mt-5">
                 Computer models to investors Short
               </h1>
               <div

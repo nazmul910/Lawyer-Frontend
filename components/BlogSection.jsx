@@ -12,8 +12,8 @@ const BlogSection = () => {
   return (
     <>
       <section className=" pt-20 " id="blog">
-        <div className="text-center space-y-5 ">
-          <h1 className="text-5xl font-pt_serif font-semibold ">
+        <div className="lg:text-center px-6 md:px-10 md:space-y-2.5 lg:space-y-5 ">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-pt_serif font-semibold  ">
             Latest From Blog
           </h1>
           <p className="text-secondary">
@@ -22,7 +22,7 @@ const BlogSection = () => {
           </p>
         </div>
       </section>
-      <div className=" pt-10 px-20">
+      <div className=" pt-10 px-6 md:px-10 lg:px-20">
         <BlogDetails />
       </div>
     </>

@@ -3,7 +3,7 @@ import { FocusCardsDemo } from "./FocusCardsDemo";
 const LawyerDetails = () => {
   return (
     <>
-      <section className="mt-20">
+      <section className="mt-20"> 
         <div className="lg:text-center px-6 md:px-10 md:space-y-2.5 lg:space-y-5 mb-10">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-pt_serif font-semibold ">
             Meet Our Attorneys
