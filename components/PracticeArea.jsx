@@ -4,7 +4,7 @@ import { Context } from "@/constextApi/Context";
 import { useContext } from "react";
 import { MdArrowRightAlt } from "react-icons/md";
 
-
+ 
 const PracticeArea = () => {
 
   const {role} = useContext(Context)
@@ -23,7 +23,7 @@ const PracticeArea = () => {
             above saw seasons void <br /> created fruitful third years god.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-12 ">
+        <div className="grid grid-cols-3 gap-6 xl:gap-12 ">
           <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
             <div className="relative overflow-hidden">
               <img
@@ -47,7 +47,7 @@ const PracticeArea = () => {
               </div>
             </div>
 
-            <div className="px-10 py-5 space-y-2 bg-white">
+            <div className=" px-5 xl:px-10 py-3 xl:py-5 space-y-2 bg-white">
               <h3 className="text-2xl font-bold">Employment Law</h3>
               <p className="text-gray-600 text-sm">
                 Dominion there fifth fowl eving heaven in life you're over us
@@ -78,7 +78,7 @@ const PracticeArea = () => {
               </div>
             </div>
 
-            <div className="px-10 py-5 space-y-2 bg-white">
+            <div className=" px-5 xl:px-10 py-3 xl:py-5 space-y-2 bg-white">
               <h3 className="text-2xl font-bold">Personal Injury</h3>
               <p className="text-gray-600 text-sm">
                 Dominion there fifth fowl eving heaven in life you're over us
@@ -109,7 +109,7 @@ const PracticeArea = () => {
               </div>
             </div>
 
-            <div className="px-10 py-5  space-y-2 bg-white">
+            <div className=" px-5 xl:px-10 py-3 xl:py-5 space-y-2 bg-white">
               <h3 className="text-2xl font-bold">Family Law</h3>
               <p className="text-gray-600 text-sm">
                 Dominion there fifth fowl eving heaven in life you're over us
