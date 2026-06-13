@@ -80,7 +80,7 @@ const HeroSection = () => {
     >
       <div className="flex justify-start items-center h-full px-5 md:p-20">
         <div className="flex flex-col md:space-y-4">
-          <h1 className="text-4xl md:text-6xl text-primary font-bold">
+          <h1 className="text-3xl md:text-6xl text-primary font-bold">
             High Quality <ContainerTextFlipDemo /> <br /> Advice and Support 
           </h1>
           <p className="text-white text-lg md:text-2xl font-sans">
@@ -94,7 +94,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-x-3 lg:gap-10 -mt-8 md:-mt-12 font-pt_serif font-bold">
+      <div className="flex justify-center gap-x-3 px-2 lg:gap-10 -mt-8 md:-mt-12 font-pt_serif font-bold">
         {[
           { start: 0, value: 40, label: "Dedicated Lawyer" },
           { start: 200, value: 576, label: "Successful Cases" },
@@ -109,7 +109,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: i * 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="text-lg md:text-4xl flex justify-center">
+            <div className="text-xl md:text-4xl flex justify-center">
               <Counter start={item.start} target={item.value} />
             </div>
             <h1 className="text-[12px] md:text-2xl">{item.label}</h1>
