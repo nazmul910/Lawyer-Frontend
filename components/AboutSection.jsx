@@ -2,7 +2,7 @@
 const AboutSection = () =>{
     return(
         <>
-            <section className="flex flex-col gap-7 md:gap-14 lg:gap-0 lg:flex py-20 mt-10" id="about">
+            <section className="flex flex-col gap-7 md:gap-14 lg:gap-0 lg:flex md:py-10 lg:py-20 mt-10" id="about">
                 <div className="">
                     <img src="/image/lawyer_client.jpeg" alt="" />
                 </div>
