@@ -15,3 +15,11 @@
 html{
     scroll-behavior:smooth;
 }
+
+.container1 {
+    @apply container mx-auto lg:px-20 md:px-10 px-5;
+}
+
+.btn-primary{
+    @apply bg-amber-500 text-gray-900 font-bold py-2 px-4 cursor-pointer rounded hover:bg-amber-600 hover:text-white transition-colors duration-200;
+}
