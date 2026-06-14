@@ -23,7 +23,7 @@ const PracticeArea = () => {
             above saw seasons void <br /> created fruitful third years god.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-12 ">
+        <div className="lg:container lg:mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-12 ">
           <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
             <div className="relative overflow-hidden">
               <img
