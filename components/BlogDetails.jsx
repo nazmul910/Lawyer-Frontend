@@ -7,7 +7,7 @@ const BlogDetails = () => {
       <section>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-9">
           <div>
-            <img src="/image/blog1.png.webp" alt="" />
+            <img src="/image/blog1.png.webp" alt="" className="w-full lg:h-[350px] object-cover " />
             <div className=" space-y-2 border-b-[1.5px] md:py-3">
               <h1 className="text-xl md:font-bold mt-5">
                 Founder Defends Site After Shoot
@@ -26,7 +26,7 @@ const BlogDetails = () => {
             <button className="mt-2 flex justify-center items-center hover:text-red-500 cursor-pointer transition-all duration-300">Read More <MdArrowRightAlt className="pt-1 text-2xl" /></button>
           </div>
           <div>
-            <img src="/image/blog2.png.webp" alt="" />
+            <img src="/image/blog2.png.webp" alt="" className="w-full lg:h-[350px] object-cover " />
             <div className=" space-y-2 border-b-[1.5px] md:py-3">
               <h1 className="text-xl md:font-bold mt-5">
                 Computer models to investors Short
@@ -45,7 +45,7 @@ const BlogDetails = () => {
             <button className="mt-2 flex justify-center items-center hover:text-red-500 cursor-pointer transition-all duration-300">Read More <MdArrowRightAlt className="pt-1 text-2xl" /></button>
           </div>
           <div>
-            <img src="/image/blog3.png.webp" alt="" />
+            <img src="/image/blog3.png.webp" alt="" className="w-full lg:h-[350px] object-cover " />
             <div className=" space-y-2 border-b-[1.5px] md:py-3">
               <h1 className="text-xl md:font-bold mt-5">
                 Computer models to investors Short

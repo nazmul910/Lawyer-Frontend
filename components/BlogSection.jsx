@@ -22,7 +22,7 @@ const BlogSection = () => {
           </p>
         </div>
       </section>
-      <div className=" pt-10 px-6 md:px-10 lg:px-20">
+      <div className=" lg:container lg:mx-auto pt-10 px-6 md:px-10 lg:px-20">
         <BlogDetails />
       </div>
     </>
