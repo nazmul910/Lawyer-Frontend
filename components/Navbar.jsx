@@ -39,9 +39,9 @@ const Navbar = () => {
 
   const close = () => setMenuOpen(false);
 
-  // Fix: className গুলো আলাদা function এ বের করা হয়েছে
+
   const desktopLinkClass = (href) => {
-    const base = "text-[11px] tracking-[0.16em] uppercase transition-all duration-300 pb-0.5 border-b";
+    const base = "text-[14px] tracking-[0.16em] uppercase transition-all duration-300 pb-0.5 border-b";
     if (activeLink === href) {
       return base + " text-[#F5F4F0] border-[#C41E3A]";
     }
@@ -93,14 +93,14 @@ const Navbar = () => {
                 {role === "lawyer" && (
                   <Link
                     href="/my-profile"
-                    className="text-[11px] tracking-[0.14em] uppercase text-white/45 hover:text-[#F5F4F0] transition-colors duration-200"
+                    className="text-[12px] tracking-[0.14em] uppercase text-white/45 hover:text-[#F5F4F0] transition-colors duration-200"
                   >
                     My Profile
                   </Link>
                 )}
                 <button
                   onClick={logout}
-                  className="flex items-center gap-2 text-[11px] tracking-[0.14em] uppercase text-white/45 hover:text-[#F5F4F0] transition-colors duration-200"
+                  className="flex items-center gap-2 text-[12px] tracking-[0.14em] uppercase text-white/45 hover:text-[#F5F4F0] transition-colors duration-200"
                 >
                   <LuLogOut className="text-base" />
                   Logout
@@ -111,13 +111,13 @@ const Navbar = () => {
                 <Link
                   href="/lawyer-registration"
                   target="_blank"
-                  className="text-[11px] tracking-[0.14em] uppercase text-[#9A7E4F] hover:text-[#F5F4F0] transition-colors duration-200"
+                  className="text-[14px] tracking-[0.14em] uppercase text-[#9A7E4F] hover:text-[#F5F4F0] transition-colors duration-200"
                 >
                   Become a Lawyer
                 </Link>
                 <Link
                   href="/login"
-                  className="text-[11px] tracking-[0.14em] uppercase text-[#F5F4F0] border border-white/25 px-5 py-2 hover:bg-[#F5F4F0] hover:text-[#0a0a0a] hover:border-[#F5F4F0] transition-all duration-200"
+                  className="text-[12px] tracking-[0.14em] uppercase text-[#F5F4F0] border border-white/25 px-5 py-2 hover:bg-[#F5F4F0] hover:text-[#0a0a0a] hover:border-[#F5F4F0] transition-all duration-200"
                 >
                   Login
                 </Link>
