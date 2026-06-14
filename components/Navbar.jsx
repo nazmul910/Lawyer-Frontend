@@ -27,10 +27,11 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { num: "01", name: "Home",           href: "#home" },
+    { num: "01", name: "Home",           href: "/" },
     { num: "02", name: "About",          href: "#about" },
     { num: "03", name: "Practice Areas", href: "#practice" },
     { num: "04", name: "Blog",           href: "#blog" },
+     { num: "05", name: "Service",       href: "/service" },
   ].filter((link) => {
     if (role === "lawyer" && link.name === "Practice Areas") return false;
     if (role === "client" && link.name === "Blog") return false;
@@ -72,13 +73,10 @@ const Navbar = () => {
         <ul className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={() => setActiveLink(link.href)}
-                className={desktopLinkClass(link.href)}
-              >
+
+              <Link href={link.href} onClick={() => setActiveLink(link.href)} className={desktopLinkClass(link.href)}>
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
