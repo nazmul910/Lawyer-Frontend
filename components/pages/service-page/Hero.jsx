@@ -8,7 +8,7 @@ export default function Hero() {
               <p className="text-[18px] uppercase font-pt_serif">Practice Areas</p>
             </div>
             <div className="w-[70%]">
-              <h1 className="text-[86px] text-center border font-playfair letter-spacing-[-3px] leading-[86px] font-medium uppercase">Comprehensive legal support</h1>
+              <h1 className="text-[86px] text-center font-playfair letter-spacing-[-3px] leading-[86px] font-medium uppercase">Comprehensive legal support</h1>
             </div>
             <div className="w-1/3 mt-4">
               <p className="text-[20px]">
