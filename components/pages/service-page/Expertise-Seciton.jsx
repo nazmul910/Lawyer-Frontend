@@ -5,7 +5,7 @@ export default function ExpertiseSection(){
         <>
             <section className="container1 py-16">
                 <div>
-                    <TopTitleSection title="Our Expertise" subtitle="Specializing in Complex Legal Matters" description="With years of experience, we offer comprehensive legal solutions tailored to your unique needs." />
+                    <TopTitleSection title="Discover the ideal legal assistance" subtitle="Our area of ​​expertise" description="Whether you’re facing a challenge or planning ahead, our team is ready to help you take the next step with confidence." />
                 </div>
 
             </section>
