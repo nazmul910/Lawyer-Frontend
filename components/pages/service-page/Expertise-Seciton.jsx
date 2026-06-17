@@ -10,7 +10,7 @@ export default function ExpertiseSection(){
                 </div>
 
                 <div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:gap-8 mt-10 md:mt-16">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 2xl:gap-8 mt-10 md:mt-16">
                         <Card/>
                         <Card/>
                         <Card/>
