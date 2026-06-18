@@ -20,7 +20,7 @@ const AdminHome = () => {
       <ul>
         {lawyerData?.map((lawyer) => (
           <li className="border my-3 p-5" key={lawyer._id}>
-            <p><strong>Name:</strong> {lawyer.name}</p>
+            <p className="font-playfair text-[20px]"><strong>Name:</strong> {lawyer.name}</p>
             <p><strong>Email:</strong> {lawyer.email}</p>
             <p><strong>Status:</strong> {lawyer.status}</p>
             <p><strong>Verified:</strong> {lawyer.isVerified ? "Yes" : "No"}</p>
