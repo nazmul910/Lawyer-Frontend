@@ -10,9 +10,9 @@ import { useContext } from "react";
 export default function Card() {
   const { lawyerData, loading, role, token } = useContext(AdminContext);
 
-  if (loading) {
-    return <p className="text-center py-10">Loading...</p>;
-  }
+//   if (loading) {
+//     return <p className="text-center py-10">Loading...</p>;
+//   }
 
   if (!lawyerData || lawyerData.length === 0) {
     return <p className="text-center py-10">No Data Here</p>;
