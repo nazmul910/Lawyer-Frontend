@@ -7,9 +7,8 @@ import { useRouter } from "next/navigation";
 const AdminHome = () => {
   const { lawyerData, loading, role,token } = useContext(AdminContext);
   const router = useRouter()
-  console.log(lawyerData, role);
 
-    
+
 
   if (loading) return <p>Loading..</p>;
 
