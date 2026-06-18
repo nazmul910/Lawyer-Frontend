@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { AdminContext } from "@/app/admin/AdminContext";
 import img from "@/public/image/area/img1.jpg";
@@ -9,10 +9,14 @@ import { useContext } from "react";
 
 export default function Card() {
   const { lawyerData, loading, role, token } = useContext(AdminContext);
-  console.log(lawyerData);
-  console.log(loading);
-  console.log(role);
-  console.log(token);
+
+  if (loading) {
+    return <p className="text-center py-10">Loading...</p>;
+  }
+
+  if (!lawyerData || lawyerData.length === 0) {
+    return <p className="text-center py-10">No Data Here</p>;
+  }
 
   return (
     <>
