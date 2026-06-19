@@ -30,7 +30,7 @@ export default function Faq() {
             <div key={i} className={`border-t border-[#dadada] ${i === faqs.length - 1 ? "border-b" : ""}`}>
               <button
                 onClick={() => toggle(i)}
-                className="w-full flex items-start gap-5 py-5 text-left"
+                className="w-full flex items-start gap-5 py-5 text-left cursor-pointer"
               >
                 <span className="font-playfair text-[15px] text-gray-400 pt-[2px] min-w-[28px]">
                   {faq.num}
