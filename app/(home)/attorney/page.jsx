@@ -5,7 +5,7 @@ export default function AttorneyPage() {
     <div className="container1 py-16">
       
         <Hero/>
-         <Hero/>
+         
       
     </div>
   );
