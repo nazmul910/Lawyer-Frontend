@@ -15,7 +15,13 @@ export default function Card() {
 //   }
 
   if (!lawyerData || lawyerData.length === 0) {
-    return <p className="text-center py-10 text-red-500">No Data Here</p>;
+    return(
+      <>
+        <div className=" w-full">
+          <p className=" py-10 text-red-500">Working something...</p>
+        </div>
+      </>
+    )
   }
 
   return (
