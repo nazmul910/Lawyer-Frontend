@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
             <div className="md:w-[70%] lg:w-1/2 2xl:w-1/3 mt-5 md:mt-2 lg:mt-4">
               <p ref={text3} className="text-[16px] md:text-[20px]">
-                We provided expert advice and advocacy across a wide range of
+                We provide expert advice and advocacy across a wide range of
                 legal issues.
               </p>
             </div>
