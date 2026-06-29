@@ -39,7 +39,7 @@ export default function Hero() {
               <p ref={text1} className="text-[18px] mb-5 md:mb-0 lg:mb-2 2xl:mb-0 uppercase font-pt_serif">Practice Areas</p>
             </div>
             <div className=" md:w-[70%] 2xl:w-[65%]">
-              <h1 ref={text2} className="text-[36px]  leading-[40px] md:text-[40px] lg:text-[60px] 2xl:text-[86px] md:text-center font-playfair lg:tracking-[-3px] 2xl:tracking-[-4px] md:leading-[45px]  lg:leading-[60px] 2xl:leading-[86px] font-medium uppercase">Comprehensive legal support</h1>
+              <h1 ref={text2} className="text-[32px]  leading-[40px] md:text-[40px] lg:text-[60px] 2xl:text-[86px] md:text-center font-playfair lg:tracking-[-3px] 2xl:tracking-[-4px] md:leading-[45px]  lg:leading-[60px] 2xl:leading-[86px] font-medium uppercase">Comprehensive legal support</h1>
             </div>
             <div className="md:w-[70%] lg:w-1/2 2xl:w-1/3 mt-5 md:mt-2 lg:mt-4">
               <p ref={text3} className="text-[16px] md:text-[20px]">
